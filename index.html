@@ -1,29 +1,219 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-XXXXXXX');
 </script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Raleway:wght@300;600&amp;display=swap" rel="stylesheet"/>
+<meta content="ST Photography &amp; Films | Lonavala | Drone, Wedding, Real Estate Shoots" name="description"/>
+<meta content="ST Photography &amp; Films" property="og:title"/>
+<meta content="images/preview.jpg" property="og:image"/>
+<meta content="Capturing Moments, Creating Memories" property="og:description"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ST Photography &amp; Films</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+  }
+
+  header {
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    colour: white;
+    text-align: centre;
+    padding: 4rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: perspective(800px) rotateX(5deg);
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px #00000088;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #f0f0f0;
+    font-weight: 300;
+  }
+
+  nav {
+    background-color: #2d0b4f;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffbb00;
+  }
+
+  /* Manual Slider */
+  .manual-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 80vh;
+    margin-top: 0;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slide {
+    min-width: 100%;
+    height: 80vh;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffffaa;
+    border: none;
+    padding: 10px 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    color: #333;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+
+  .nav-arrow:hover {
+    background-color: #ffffffee;
+  }
+
+  .nav-left {
+    left: 20px;
+  }
+
+  .nav-right {
+    right: 20px;
+  }
+
+  #promo-banners {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+  }
+
+  #promo-banners h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  #promo-banners p {
+    font-size: 1rem;
+    color: #444;
+  }
 
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.floating-bar a:hover {
+  background-color: #ffffff33;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
 
+body {
+  background: linear-gradient(135deg, #e0f7fa, #e1f5fe, #ffffff);
+  background-image: radial-gradient(circle at top left, rgba(255,255,255,0.1) 10%, transparent 11%),
+                    radial-gradient(circle at bottom right, rgba(0,0,0,0.05) 10%, transparent 11%);
+  background-size: 20px 20px, 30px 30px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+</style>
+<!-- Header -->
+<header data-aos="fade-down" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: perspective(900px) rotateX(4deg);">
+<h1 style="font-size: 3.5rem; text-shadow: 3px 3px 8px rgba(0,0,0,0.5); letter-spacing: 2px;">ST Photography &amp; Films</h1>
+<p style="font-size: 1.3rem; font-weight: 300; text-shadow: 1px 1px 4px rgba(0,0,0,0.4);">Capturing Moments, Creating Memories</p>
+</header>
+<!-- Navigation -->
+<nav data-aos="fade-up">
+<a href="#gallery">Gallery</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<!-- Manual Sliding Image Gallery -->
+<div class="manual-slider">
+<div class="slider-wrapper" id="slider">
+<div class="slide"><img alt="Drone Landscape" src="large_files/1.jpg"/><div class="slide-caption">🏝️✨ Resort Aerial Landscape Shoot
+Breathtaking views of serene resorts from the sky 🌅🚁🌴</div></div>
 
-  <meta name="description" content="ST Photography & Films | Lonavala | Drone, Wedding, Real Estate Shoots">
-  <meta property="og:title" content="ST Photography & Films">
-  <meta property="og:image" content="images/preview.jpg">
-  <meta property="og:description" content="Capturing Moments, Creating Memories">
+<div class="slide"><img alt="Wedding Photography" src="large_files/2.jpg"/><div class="slide-caption"></div></div>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ST Photography & Films</title>
-  <style>
+<div class="slide"><img alt="Real Estate Shoot" src="large_files\3.jpg"/><div class="slide-caption">🏡📸 Bungalows & Real Estate Aerial Shoot
+Elegant homes and real estate captured with cinematic drone angles 🎥🏠🌤️</div></div>
+
+<div class="slide"><img alt="Nature Photographer" src="large_files\4.jpg"/><div class="slide-caption"></div></div>
+</div>
+<button class="nav-arrow nav-left" onclick="document.getElementById('slider').scrollBy({left: -window.innerWidth, behavior: 'smooth'})">←</button>
+<button class="nav-arrow nav-right" onclick="document.getElementById('slider').scrollBy({left: window.innerWidth, behavior: 'smooth'})">→</button>
+</div>
+<!-- Services Section -->
+<section data-aos="zoom-in" id="promo-banners">
+<h2>Explore Our Services</h2>
+  <div class="promo-gallery">
+    <img src="media/IMG_8957.PNG" alt="ST Drone Services" />
+    <img src="media/IMG_8976.PNG" alt="ST Photography & Videography " />
+    <img src="media/IMG_8970.PNG" alt="ST Graphic Design Services" />
+  </div>
+<p><b> 🌍🏘️ Developed Land Aerial View
+Showcasing modern infrastructure and planned layouts from above 🛰️📐🛣️ <br> 🌾📷 Land Aerial View
+Wide-open plots and property landscapes from a bird’s-eye view 🛩️🌿🗺️ <br> ❤️ We Craft Memories In Every Frame 🍀 <b></p>
+</section>
+<style>
     body {
       margin: 0;
       font-family: 'Raleway', sans-serif;
@@ -34,7 +224,7 @@
       background: linear-gradient(to right, #0d47a1, #1976d2);
       color: #fff;
       padding: 2rem;
-      text-align: center;
+      text-align: centre;
       font-family: 'Playfair Display', serif;
     }
     header h1 {
@@ -45,7 +235,7 @@
     nav {
       background-color: #30185d;
       padding: 1rem;
-      text-align: center;
+      text-align: centre;
     }
     nav a {
       color: #fef5f5;
@@ -331,201 +521,158 @@ text-decoration: underline;
 }
 </style>
 </head>
-<body>
-
-  <header>
-    <h1>ST Photography & Films</h1>
-    <p>Capturing Moments, Creating Memories</p>
-  </header>
-
-  <nav>
-    <a href="#gallery">Gallery</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
- <section id="promo-banners">
-  <h2>Explore Our Services</h2>
-  <div class="promo-gallery">
-    <img src="media/IMG_8957.PNG" alt="ST Drone Services" />
-    <img src="media/IMG_8976.PNG" alt="ST Photography & Videography " />
-    <img src="media/IMG_8970.PNG" alt="ST Graphic Design Services" />
-  </div>
-</section>
-
-
-  <section id="gallery">
-  <div class="section-heading">
-  <h2 class="gallery-main-title">Work</h2>
+<h2 class="gallery-main-title">Work</h2>
 </div>
-  
-  <!-- Videography Section -->
-  <div style="margin-top: 3rem;">
-    <h2 class="section-title" style="color: #00386f;">
-  Drone Shoots & Reels
+<!-- Videography Section -->
+<div style="margin-top: 3rem;">
+<h2 class="section-title" style="color: #00386f;">
+  Drone Shoots &amp; Reels
 </h2>
-
-    <div class="gallery">
-      <p>
-      <video controls src="media/Video 1.mp4"></video>
-      <video controls src="media/Video 2.mp4"></video>
-      </p>
-      <video controls src="media/Reel 1.mp4"></video>
-      <video controls src="media/Reel 2.mp4"></video>
-      <video controls src="media/Chavni Reel.mp4"></video>
-      <video controls src="media/IMG_7276.MP4"></video>
-      <video controls src="media/IMG_7275.MP4"></video>
-      <video controls src="media/IMG_6888.MP4"></video>
-  </div>
-  </div>
-</section>
-
-<section id="interior-gallery">
-  <h3 class="gallery-sub-title">Property & Resort Photography | Interior Design Shoots & More </h3>
-
-  <div class="gallery-grid">
-    <img src="media/IMG-20250618-WA0012.jpg" alt="Sample Photo 11">
-    <img src="media/IMG-20250618-WA0014.jpg" alt="Sample Photo 12">
-    <img src="media/IMG-20250618-WA0018.jpg" alt="Sample Photo 13">
-    <img src="media/IMG-20250618-WA0017.jpg" alt="Sample Photo 14">
-    <img src="media/IMG-20250618-WA0015.jpg" alt="Sample Photo 15">
-    <img src="media/IMG-20250618-WA0013.jpg" alt="Sample Photo 16">
-    <img src="media/7.jpg" alt="Sample Photo 17">
-    <img src="media/IMG-20250618-WA0016.jpg" alt="Sample Photo 18">
-    <img src="media/9.jpg" alt="Sample Photo 19">
-    <img src="media/IMG-20250618-WA0011.jpg" alt="Sample Photo 20">
-
-    <img src="media/IMG_4109.jpg"alt="Sample Photo 21">
-<img src="media/IMG_4150.jpg"alt="Sample Photo 22">
-<img src="media/IMG_4100.jpg"alt="Sample Photo 23">
-<img src="media/IMG_4102.jpg"alt="Sample Photo 24">
-<img src= "media/IMG_4135.jpg"alt="Sample Photo 25">
-<img src="media/IMG_4139.jpg"alt="Sample Photo 26">
-<img src= "media/IMG_4173.jpg"alt="Sample Photo 27">
-<img src="media/IMG_4178.jpg" alt="Sample Photo 28">
-<img src="media/IMG_4196.jpg"alt="Sample Photo 29">
-<img src= "media/IMG_4215.jpg"alt="Sample Photo 30">
-<img src= "media/IMG_4216.jpg"alt="Sample Photo 31">
-<img src="media/IMG_6956.jpg" alt="Sample Photo 32">
-<img src= "media/IMG_7147.JPG"alt="Sample Photo 33">
-<img src= "media/IMG_6936 (1).jpg"alt="Sample Photo 34">
-<img src="media/IMG_6974.jpg" alt="Sample Photo 35">
-<img src="media/IMG_6949.JPG" alt="Sample Photo 36">
-<img src= "media/IMG_7164.JPG"alt="Sample Photo 37">
-<img src= "media/IMG_8737.jpg"alt="Sample Photo 38">
-<img src= "media/IMG_8529.jpg"alt="Sample Photo 39">
-<img src= "media/IMG_8568.jpg"alt="Sample Photo 40">
-<img src= "media/IMG_8536.jpg"alt="Sample Photo 41">
-<img src= "media/IMG_8542.jpg"alt="Sample Photo 42">
-<img src= "media/IMG_8562.jpg"alt="Sample Photo 43">
-<img src= "media/IMG_8575.jpg"alt="Sample Photo 44">
-<img src= "media/IMG_8600.jpg"alt="Sample Photo 45">
-<img src= "media/IMG_8619.jpg"alt="Sample Photo 46">
-<img src= "media/IMG_8641.jpg"alt="Sample Photo 47">
-<img src= "media/IMG_8618.jpg"alt="Sample Photo 48">
-<img src= "media/IMG_8632.jpg"alt="Sample Photo 49">
-<img src= "media/IMG_8706.jpg"alt="Sample Photo 50">
-<img src= "media/IMG_8577.jpg"alt="Sample Photo 51">
-  </div>
-</section>
-
-
-<div>
-  <section id="gallery">
-    <h3 class="gallery-sub-title"> Product, Restaurant & Commercial Shoots </h3>
-
-    <div class="gallery-grid">
-      <img src="media/IMG_6122.JPG" alt="Sample Photo 1">
-      <img src="media/IMG_6123.JPG" alt="Sample Photo 2">
-      <img src="media/IMG_6695.JPG" alt="Sample Photo 3">
-      <img src="media/IMG_6124.JPG" alt="Sample Photo 4">
-      <img src="media/IMG_6146.JPG" alt="Sample Photo 5">
-      <img src="media/IMG_6147.JPG" alt="Sample Photo 6">
-      <img src="media/IMG_6149.JPG" alt="Sample Photo 7">
-      <img src="media/IMG_6751.JPG" alt="Sample Photo 8">
-      <img src="media/IMG_6709.JPG" alt="Sample Photo 9">
-      <img src="media/IMG_6661.JPG" alt="Sample Photo 10">
-      <img src= "media/IMG_7332.jpg"alt="Sample Photo 52 ">
-<img src="media/IMG_7413.jpg" alt="Sample Photo 53 ">
-<img src= "media/IMG_7427.jpg"alt="Sample Photo 54 ">
-<img src= "media/IMG_7402.jpg"alt="Sample Photo 55 ">
-<img src="media/IMG_7516.jpg" alt="Sample Photo 55">
-<img src= "media/IMG_7517.jpg"alt="Sample Photo 57 ">
-<img src= "media/IMG_7495.jpg"alt="Sample Photo 58 ">
-<img src= "media/IMG_7405.jpg"alt="Sample Photo 59 ">
-<img src="media/IMG_7407.jpg"A alt="Sample Photo 60 ">
-<img src= "media/IMG_7480.jpg"alt="Sample Photo 61 ">
-<img src="media/IMG_9346.jpg" alt="Sample Photo 62 ">
-<img src= "media/IMG_9350.jpg"alt="Sample Photo 63 ">
-<img src="media/IMG_9169 - Copy.jpg" alt="Sample Photo 64 ">
-<img src="media/IMG_9179(1).jpg" alt="Sample Photo 65 ">
-<img src= "media/IMG_9222.jpg"alt="Sample Photo 66 ">
-
-    </div>
-  </section>
+<div class="gallery">
+<p>
+<video controls="" src="large_files/062.mp4"></video>
+<video controls="" src="large_files/0624.mp4"></video>
+</p>
+<video controls="" src="large_files/0624(4).mp4"></video>
+<video controls="" src="large_files/0624(2).mp4"></video>
+<video controls="" src="large_files/0624(4).mp4"></video>
+<video controls="" src="large_files/0624(5).mp4"></video>
+<video controls="" src="large_files/0624(6).mp4"></video>
+<video controls="" src="large_files/0624(7).mp4"></video>
 </div>
-
-
-<div>
-  <section id="gallery">
-    <h3 class="gallery-sub-title"> Captured Moments – From Portraits to Outdoor Events & More </h3>
-    <div class="gallery-grid">
-<img src="media/IMG_0264.JPG" alt="Sample Photo 1 ">
-<img src= "media/SZBV4382.JPG"alt="Sample Photo 2 ">
-<img src="media/IMG_0267.JPG" alt="Sample Photo 3 ">
-<img src="media/DSC_9672.JPG" alt="Sample Photo 4 ">
-<img src="media/DSC_9664.jpg" alt="Sample Photo 5 ">
-<img src= "media/DSC_9683.jpg"alt="Sample Photo 6 ">
-<img src= "media/CLDU9265.JPG"alt="Sample Photo 7 ">
-<img src= "media/DPDA8892.JPG"alt="Sample Photo 8 ">
-<img src= "media/DSC_9695.jpg"alt="Sample Photo 9 ">
-<img src= "media/DSC_9694.jpg"alt="Sample Photo 10 ">
-<img src= "media/VFRN3146.JPG"alt="Sample Photo 11 ">
-<img src= "media/IMG_0418.JPG"alt="Sample Photo 12 ">
-<img src= "media/IMG_0419.JPG"alt="Sample Photo 13 ">
-<img src= "media/IMG_7349.JPG"alt="Sample Photo 14 ">
-
-<img src= "media/IMG_9159.JPG"alt="Sample Photo 15 ">
-<img src= "media/HYGB5232.JPG"alt="Sample Photo 16 ">
-<img src= "media/IMG_9160.JPG"alt="Sample Photo 17">
-<img src= "media/IMG_0409.JPG"alt="Sample Photo 18 ">
-<img src= "media/IMG_9161.JPG"alt="Sample Photo 19 ">
-<img src= "media/IMG_9158.JPG"alt="Sample Photo 20 ">
-<img src= "media/IMG_4485.JPG"alt="Sample Photo 21 ">
-<img src= "media/IMG_4486.JPG"alt="Sample Photo 22 ">
-<img src= "media/IMG_4723.JPG"alt="Sample Photo 23 ">
-<img src= "media/IMG_4674.JPG"alt="Sample Photo 24 ">
-<img src= "media/IMG_4472.JPG"alt="Sample Photo 25 ">
 </div>
 </section>
- <section id="services">
-    <!DOCTYPE html>
+<section data-aos="fade-up" id="interior-gallery">
+<h3 class="gallery-sub-title">Property &amp; Resort Photography | Interior Design Shoots &amp; More </h3>
+<div class="gallery-grid">
+<img alt="Sample Photo 11" src="media/IMG-20250618-WA0012.jpg"/>
+<img alt="Sample Photo 12" src="media/IMG-20250618-WA0014.jpg"/>
+<img alt="Sample Photo 13" src="media/IMG-20250618-WA0018.jpg"/>
+<img alt="Sample Photo 14" src="media/IMG-20250618-WA0017.jpg"/>
+<img alt="Sample Photo 15" src="media/IMG-20250618-WA0015.jpg"/>
+<img alt="Sample Photo 16" src="media/IMG-20250618-WA0013.jpg"/>
+<img alt="Sample Photo 17" src="media/7.jpg"/>
+<img alt="Sample Photo 18" src="media/IMG-20250618-WA0016.jpg"/>
+<img alt="Sample Photo 19" src="media/9.jpg"/>
+<img alt="Sample Photo 20" src="media/IMG-20250618-WA0011.jpg"/>
+<img alt="Sample Photo 21" src="media/IMG_4109.jpg"/>
+<img alt="Sample Photo 22" src="media/IMG_4150.jpg"/>
+<img alt="Sample Photo 23" src="media/IMG_4100.jpg"/>
+<img alt="Sample Photo 24" src="media/IMG_4102.jpg"/>
+<img alt="Sample Photo 25" src="media/IMG_4135.jpg"/>
+<img alt="Sample Photo 26" src="media/IMG_4139.jpg"/>
+<img alt="Sample Photo 27" src="media/IMG_4173.jpg"/>
+<img alt="Sample Photo 28" src="media/IMG_4178.jpg"/>
+<img alt="Sample Photo 29" src="media/IMG_4196.jpg"/>
+<img alt="Sample Photo 30" src="media/IMG_4215.jpg"/>
+<img alt="Sample Photo 31" src="media/IMG_4216.jpg"/>
+<img alt="Sample Photo 32" src="media/IMG_6956.jpg"/>
+<img alt="Sample Photo 33" src="media/IMG_7147.JPG"/>
+<img alt="Sample Photo 34" src="media/IMG_6936 (1).jpg"/>
+<img alt="Sample Photo 35" src="media/IMG_6974.jpg"/>
+<img alt="Sample Photo 36" src="media/IMG_6949.JPG"/>
+<img alt="Sample Photo 37" src="media/IMG_7164.JPG"/>
+<img alt="Sample Photo 38" src="media/IMG_8737.jpg"/>
+<img alt="Sample Photo 39" src="media/IMG_8529.jpg"/>
+<img alt="Sample Photo 40" src="media/IMG_8568.jpg"/>
+<img alt="Sample Photo 41" src="media/IMG_8536.jpg"/>
+<img alt="Sample Photo 42" src="media/IMG_8542.jpg"/>
+<img alt="Sample Photo 43" src="media/IMG_8562.jpg"/>
+<img alt="Sample Photo 44" src="media/IMG_8575.jpg"/>
+<img alt="Sample Photo 45" src="media/IMG_8600.jpg"/>
+<img alt="Sample Photo 46" src="media/IMG_8619.jpg"/>
+<img alt="Sample Photo 47" src="media/IMG_8641.jpg"/>
+<img alt="Sample Photo 48" src="media/IMG_8618.jpg"/>
+<img alt="Sample Photo 49" src="media/IMG_8632.jpg"/>
+<img alt="Sample Photo 50" src="media/IMG_8706.jpg"/>
+<img alt="Sample Photo 51" src="media/IMG_8577.jpg"/>
+</div>
+</section>
+<div>
+<section data-aos="fade-up" id="gallery">
+<h3 class="gallery-sub-title"> Product, Restaurant &amp; Commercial Shoots </h3>
+<div class="gallery-grid">
+<img alt="Sample Photo 1" src="media/IMG_6122.JPG"/>
+<img alt="Sample Photo 2" src="media/IMG_6123.JPG"/>
+<img alt="Sample Photo 3" src="media/IMG_6695.JPG"/>
+<img alt="Sample Photo 4" src="media/IMG_6124.JPG"/>
+<img alt="Sample Photo 5" src="media/IMG_6146.JPG"/>
+<img alt="Sample Photo 6" src="media/IMG_6147.JPG"/>
+<img alt="Sample Photo 7" src="media/IMG_6149.JPG"/>
+<img alt="Sample Photo 8" src="media/IMG_6751.JPG"/>
+<img alt="Sample Photo 9" src="media/IMG_6709.JPG"/>
+<img alt="Sample Photo 10" src="media/IMG_6661.JPG"/>
+<img alt="Sample Photo 52 " src="media/IMG_7332.jpg"/>
+<img alt="Sample Photo 53 " src="media/IMG_7413.jpg"/>
+<img alt="Sample Photo 54 " src="media/IMG_7427.jpg"/>
+<img alt="Sample Photo 55 " src="media/IMG_7402.jpg"/>
+<img alt="Sample Photo 55" src="media/IMG_7516.jpg"/>
+<img alt="Sample Photo 57 " src="media/IMG_7517.jpg"/>
+<img alt="Sample Photo 58 " src="media/IMG_7495.jpg"/>
+<img alt="Sample Photo 59 " src="media/IMG_7405.jpg"/>
+<img a="" alt="Sample Photo 60 " src="media/IMG_7407.jpg"/>
+<img alt="Sample Photo 61 " src="media/IMG_7480.jpg"/>
+<img alt="Sample Photo 62 " src="media/IMG_9346.jpg"/>
+<img alt="Sample Photo 63 " src="media/IMG_9350.jpg"/>
+<img alt="Sample Photo 64 " src="media/IMG_9169 - Copy.jpg"/>
+<img alt="Sample Photo 65 " src="media/IMG_9179(1).jpg"/>
+<img alt="Sample Photo 66 " src="media/IMG_9222.jpg"/>
+</div>
+</section>
+</div>
+<div>
+<section data-aos="fade-up" id="gallery">
+<h3 class="gallery-sub-title"> Captured Moments – From Portraits to Outdoor Events &amp; More </h3>
+<div class="gallery-grid">
+<img alt="Sample Photo 1 " src="media/IMG_0264.JPG"/>
+<img alt="Sample Photo 2 " src="media/SZBV4382.JPG"/>
+<img alt="Sample Photo 3 " src="media/IMG_0267.JPG"/>
+<img alt="Sample Photo 4 " src="media/DSC_9672.JPG"/>
+<img alt="Sample Photo 5 " src="media/DSC_9664.jpg"/>
+<img alt="Sample Photo 6 " src="media/DSC_9683.jpg"/>
+<img alt="Sample Photo 7 " src="media/CLDU9265.JPG"/>
+<img alt="Sample Photo 8 " src="media/DPDA8892.JPG"/>
+<img alt="Sample Photo 9 " src="media/DSC_9695.jpg"/>
+<img alt="Sample Photo 10 " src="media/DSC_9694.jpg"/>
+<img alt="Sample Photo 11 " src="media/VFRN3146.JPG"/>
+<img alt="Sample Photo 12 " src="media/IMG_0418.JPG"/>
+<img alt="Sample Photo 13 " src="media/IMG_0419.JPG"/>
+<img alt="Sample Photo 14 " src="media/IMG_7349.JPG"/>
+<img alt="Sample Photo 15 " src="media/IMG_9159.JPG"/>
+<img alt="Sample Photo 16 " src="media/HYGB5232.JPG"/>
+<img alt="Sample Photo 17" src="media/IMG_9160.JPG"/>
+<img alt="Sample Photo 18 " src="media/IMG_0409.JPG"/>
+<img alt="Sample Photo 19 " src="media/IMG_9161.JPG"/>
+<img alt="Sample Photo 20 " src="media/IMG_9158.JPG"/>
+<img alt="Sample Photo 21 " src="media/IMG_4485.JPG"/>
+<img alt="Sample Photo 22 " src="media/IMG_4486.JPG"/>
+<img alt="Sample Photo 23 " src="media/IMG_4723.JPG"/>
+<img alt="Sample Photo 24 " src="media/IMG_4674.JPG"/>
+<img alt="Sample Photo 25 " src="media/IMG_4472.JPG"/>
+</div>
+</section>
+<section data-aos="fade-up" id="services">
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-XXXXXXX');
 </script>
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
-
-
-  <meta name="description" content="ST Photography & Films | Lonavala | Drone, Wedding, Real Estate Shoots">
-  <meta property="og:title" content="ST Photography & Films">
-  <meta property="og:image" content="images/preview.jpg">
-  <meta property="og:description" content="Capturing Moments, Creating Memories">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services</title>
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;family=Raleway:wght@300;600&amp;display=swap" rel="stylesheet"/>
+<meta content="ST Photography &amp; Films | Lonavala | Drone, Wedding, Real Estate Shoots" name="description"/>
+<meta content="ST Photography &amp; Films" property="og:title"/>
+<meta content="images/preview.jpg" property="og:image"/>
+<meta content="Capturing Moments, Creating Memories" property="og:description"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services</title>
+<style>
     body {
       font-family: Arial, sans-serif;
       background-color: #002f93;
@@ -588,76 +735,66 @@ body {
 </style>
 </head>
 <body>
-  
-</section>
-
-  <h2>Our Services</h2>
-  <div class="services-container">
-    <div class="card">
-      <h3>🛩️📸 <strong>Drone Videography & Photography</strong></h3>
-      <ul>
-        <li>📍 Breathtaking aerial views of villas, plots & resorts</li>
-        <li>🏡 Perfect for real estate</li>
-        <li>🌅 Ideal for resorts, and 🏢 commercial spaces</li>
-        <li>🎯 High-precision drone shots for branding & marketing</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>📷 <strong>Photography</strong></h3>
-      <ul>
-        <li>💍 Weddings, 🎂 birthdays, 🎈 events, and 👶 baby shoots</li>
-        <li>🧑‍🤝‍🧑 Portraits, 📸 candid moments</li>
-        <li>🎭 Themed sessions</li>
-        <li>🖌️ High-end editing to preserve every emotion 💖</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🎥🎬 <strong>Videography</strong></h3>
-      <ul>
-        <li>📱 Trendy Instagram reels</li>
-        <li>✨ Highlight edits, 🎞️ story videos</li>
-        <li>💑 Pre-wedding, 🛍️ product videos, 🎙️ interviews</li>
-        <li>🔥 Smooth transitions, 🎶 synced music</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>📱📈 <strong>Social Media Content</strong></h3>
-      <ul>
-        <li>📸 Photos & Reels for Instagram & Facebook</li>
-        <li>💬 Content for WhatsApp Business</li>
-        <li>🚀 Boost your visibility and engagement</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🍔📦 <strong>Product & Food Photography</strong></h3>
-      <ul>
-        <li>🍽️ For restaurants, 🛒 e-commerce & shops</li>
-        <li>✨ Styled shoots to enhance design & focus</li>
-        <li>📖 Perfect for menus, 🧾 catalogs, 🌐 online stores</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🎨🖍️ <strong>Graphic Designing</strong></h3>
-      <ul>
-        <li>🔤 Logos, 🖼️ Posters, 📲 Social Media Creatives, 📰 Flyers</li>
-        <li>🖥️ For digital and 🖨️ print media</li>
-        <li>💡 Unique & modern — tailored to YOUR brand</li>
-      </ul>
-    </div>
-  </div>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-
-
-  <button onclick="topFunction()" id="topBtn" title="Go to top">⬆️</button>
-  <style>
+</body></html></section>
+<h2>Our Services</h2>
+<div class="services-container">
+<div class="card" data-aos="flip-left">
+<h3>🛩️📸 <strong>Drone Videography &amp; Photography</strong></h3>
+<ul>
+<li>📍 Breathtaking aerial views of villas, plots &amp; resorts</li>
+<li>🏡 Perfect for real estate</li>
+<li>🌅 Ideal for resorts, and 🏢 commercial spaces</li>
+<li>🎯 High-precision drone shots for branding &amp; marketing</li>
+</ul>
+</div>
+<div class="card" data-aos="flip-left">
+<h3>📷 <strong>Photography</strong></h3>
+<ul>
+<li>💍 Weddings, 🎂 birthdays, 🎈 events, and 👶 baby shoots</li>
+<li>🧑‍🤝‍🧑 Portraits, 📸 candid moments</li>
+<li>🎭 Themed sessions</li>
+<li>🖌️ High-end editing to preserve every emotion 💖</li>
+</ul>
+</div>
+<div class="card" data-aos="flip-left">
+<h3>🎥🎬 <strong>Videography</strong></h3>
+<ul>
+<li>📱 Trendy Instagram reels</li>
+<li>✨ Highlight edits, 🎞️ story videos</li>
+<li>💑 Pre-wedding, 🛍️ product videos, 🎙️ interviews</li>
+<li>🔥 Smooth transitions, 🎶 synced music</li>
+</ul>
+</div>
+<div class="card" data-aos="flip-left">
+<h3>📱📈 <strong>Social Media Content</strong></h3>
+<ul>
+<li>📸 Photos &amp; Reels for Instagram &amp; Facebook</li>
+<li>💬 Content for WhatsApp Business</li>
+<li>🚀 Boost your visibility and engagement</li>
+</ul>
+</div>
+<div class="card" data-aos="flip-left">
+<h3>🍔📦 <strong>Product &amp; Food Photography</strong></h3>
+<ul>
+<li>🍽️ For restaurants, 🛒 e-commerce &amp; shops</li>
+<li>✨ Styled shoots to enhance design &amp; focus</li>
+<li>📖 Perfect for menus, 🧾 catalogs, 🌐 online stores</li>
+</ul>
+</div>
+<div class="card" data-aos="flip-left">
+<h3>🎨🖍️ <strong>Graphic Designing</strong></h3>
+<ul>
+<li>🔤 Logos, 🖼️ Posters, 📲 Social Media Creatives, 📰 Flyers</li>
+<li>🖥️ For digital and 🖨️ print media</li>
+<li>💡 Unique &amp; modern — tailored to YOUR brand</li>
+</ul>
+</div>
+</div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<button id="topBtn" onclick="topFunction()" title="Go to top">⬆️</button>
+<style>
     #topBtn {
       position: fixed;
       bottom: 30px;
@@ -685,7 +822,7 @@ body {
 }
 
 </style>
-  <script>
+<script>
     let btn = document.getElementById("topBtn");
     window.onscroll = function() {
       btn.style.display = window.scrollY > 100 ? "block" : "none";
@@ -695,12 +832,10 @@ body {
       document.documentElement.scrollTop = 0;
     }
   </script>
-
-
 <div class="floating-bar">
-  <a href="tel:+918796274844">📞 Call</a>
-  <a href="https://wa.me/918796274844">💬 WhatsApp</a>
-  <a href="#contact">📧 Email</a>
+<a href="tel:+918796274844">📞 Call</a>
+<a href="https://wa.me/918796274844">💬 WhatsApp</a>
+<a href="#contact">📧 Email</a>
 </div>
 <style>
 .floating-bar {
@@ -748,29 +883,18 @@ body {
     }
 
 </style>
-
 <script>
 document.getElementById('modeToggle').addEventListener('change', function () {
   document.body.classList.toggle('dark-theme');
 });
 </script>
 <style>
-.dark-theme {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-}
-.dark-theme header, .dark-theme nav, .dark-theme footer {
-  background-color: #333 !important;
-  color: white !important;
-}
 
 body {
   cursor: url('https://cdn-icons-png.flaticon.com/512/685/685655.png'), auto;
 }
 
 </style>
-
-
 <div id="scrollProgress"></div>
 <script>
   window.onscroll = function() {
@@ -796,114 +920,133 @@ body {
 }
 
 </style>
+</div>
+<style>
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
 
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .dark-theme {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+  }
+
+  .dark-theme .card {
+    background-color: #222;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    #hero div {
+      padding: 20px;
+    }
+    #hero h1 {
+      font-size: 2rem;
+    }
+    #hero p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</script>
 </body>
 </html>
-
-  </section>
-
-  <section id="about">
-   <h1>📸 About Us</h1>
-
-  <div class="section">
-    <p>📸 <strong>About Us | ST Photography & Films 🎬</strong></p>
-    <p>Welcome to <strong>ST Photography & Films</strong>, where <em>moments become memories</em> and every frame tells a story. ✨<br>
-    Curated by <strong>Sourabh Thorat</strong> <a href="https://www.instagram.com/sourabhthorat_st?igsh=NXo4OTc4Z2g1MWJ0&utm_source=qr">@st_sourabhthorat</a>, we specialize in:</p>
-
-    <ul>
-      <li>🎥 <strong>Cinematic Videography</strong> | 📷 <strong>Creative Photography</strong></li>
-      <li>🚁 <strong>Drone Shots</strong> | 📍 <strong>Destination & Event Coverage</strong></li>
-      <li>🏡 <strong>Property, Villa & Real Estate Shoots</strong></li>
-      <li>👰 <strong>Weddings, Pre-Weddings, and Portraits</strong></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <p>From the <em>vibrant streets of Lonavala</em> to intimate celebrations, we aim to capture life in its most <strong>raw, real, and beautiful form</strong>. 💙<br>
+<section data-aos="fade-up" id="about">
+<h1>📸 About Us</h1>
+<div class="section">
+<p>📸 <strong>About Us | ST Photography &amp; Films 🎬</strong></p>
+<p>Welcome to <strong>ST Photography &amp; Films</strong>, where <em>moments become memories</em> and every frame tells a story. ✨<br/>
+    Curated by <strong>Sourabh Thorat</strong> <a href="https://www.instagram.com/sourabhthorat_st?igsh=NXo4OTc4Z2g1MWJ0&amp;utm_source=qr">@st_sourabhthorat</a>, we specialize in:</p>
+<ul>
+<li>🎥 <strong>Cinematic Videography</strong> | 📷 <strong>Creative Photography</strong></li>
+<li>🚁 <strong>Drone Shots</strong> | 📍 <strong>Destination &amp; Event Coverage</strong></li>
+<li>🏡 <strong>Property, Villa &amp; Real Estate Shoots</strong></li>
+<li>👰 <strong>Weddings, Pre-Weddings, and Portraits</strong></li>
+</ul>
+</div>
+<div class="section">
+<p>From the <em>vibrant streets of Lonavala</em> to intimate celebrations, we aim to capture life in its most <strong>raw, real, and beautiful form</strong>. 💙<br/>
     With a keen eye, a creative mind, and top-notch gear, we’re here to turn your vision into a visual masterpiece. 🎨</p>
-  </div>
-
-  <div class="section">
-    <p>👉 <strong>Follow us on Instagram:</strong></p>
-    <ul>
-      <li><a href="https://www.instagram.com/sourabhthorat_st?igsh=NXo4OTc4Z2g1MWJ0&utm_source=qr">@st_sourabhthorat</a> – <strong>Personal Account</strong> 👂</li>
-      <li><a href="https://instagram.com/beyondthelensby_st">@beyondthelensby_st</a> – <strong>for Drone Visuals & Work</strong> 🌊✨</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <p>📩 <strong>Let’s create magic together.</strong> Your story deserves the spotlight! 🎬 ✨</p>
-  </div>
-
-
+</div>
+<div class="section">
+<p>👉 <strong>Follow us on Instagram:</strong></p>
+<ul>
+<li><a href="https://www.instagram.com/sourabhthorat_st?igsh=NXo4OTc4Z2g1MWJ0&amp;utm_source=qr">@st_sourabhthorat</a> – <strong>Personal Account</strong> 👂</li>
+<li><a href="https://instagram.com/beyondthelensby_st">@beyondthelensby_st</a> – <strong>for Drone Visuals &amp; Work</strong> 🌊✨</li>
+</ul>
+</div>
+<div class="section">
+<p>📩 <strong>Let’s create magic together.</strong> Your story deserves the spotlight! 🎬 ✨</p>
+</div>
 </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you!</p>
-    <div class="contact-info">
-      <p><strong>Phone ( Call & WhatsApp) : </strong> +91 8796274844</p>
-      <p><strong>Email:</strong> <a href="mailto:stphotographyfilms@gmail.com">stphotographyfilms@gmail.com</a></p>
-
-  <section id="instagram-follow">
-  <h2>📸 Follow Us on Instagram</h2>
-  <p>Catch Our Latest Shoots, Reels, Behind-the-Scenes & More!</p>
-  <a href="https://www.instagram.com/beyondthelensby_st" target="_blank" class="insta-button">
+<section data-aos="fade-up" id="contact">
+<h2>Contact Us</h2>
+<p>We'd love to hear from you!</p>
+<div class="contact-info">
+<p><strong>Phone ( Call &amp; WhatsApp) : </strong> +91 8796274844</p>
+<p><strong>Email:</strong> <a href="mailto:stphotographyfilms@gmail.com">stphotographyfilms@gmail.com</a></p>
+<section id="instagram-follow">
+<h2>📸 Follow Us on Instagram</h2>
+<p>Catch Our Latest Shoots, Reels, Behind-the-Scenes &amp; More!</p>
+<a class="insta-button" href="https://www.instagram.com/beyondthelensby_st" target="_blank">
     💖 Follow @beyondthelensby_st
   </a>
 </section>
-
 <section id="youtube-subscribe">
-  <h2>🎥 Subscribe to Our YouTube Channel</h2>
-  <p>Like, Share & Subscribe for Behind-the-Scenes, Edits & More!</p>
-  <a href="https://youtube.com/@st_sourabhthorat?si=w3HwHKfnC9BFeIka" target="_blank" class="yt-button">
+<h2>🎥 Subscribe to Our YouTube Channel</h2>
+<p>Like, Share &amp; Subscribe for Behind-the-Scenes, Edits &amp; More!</p>
+<a class="yt-button" href="https://youtube.com/@st_sourabhthorat?si=w3HwHKfnC9BFeIka" target="_blank">
     🔔 Subscribe Now
   </a>
 </section>
-</p>
 </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 ST Photography Films By Sourabh Thorat. All rights reserved.</p>
-  </footer>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-
-
-  <button onclick="topFunction()" id="topBtn" title="Go to top">⬆️</button>
-  <style>
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 20px;
-      font-size: 18px;
-      padding: 10px;
-      background: #0d47a1;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-    }
-  
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-.gallery-grid img {
-  transition: transform 0.3s ease;
-}
-
-
-body {
-  cursor: url('https://cdn-icons-png.flaticon.com/512/685/685655.png'), auto;
-}
-
-</style>
-  <script>
-    let btn = document.getElementById("topBtn");
+</section>
+<footer>
+<p>© 2025 ST Photography Films By Sourabh Thorat. All rights reserved.</p>
+</footer>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<button id="topBtn" onclick="topFunction()" title="Go to top">⬆️</button>
+<script>
     window.onscroll = function() {
       btn.style.display = window.scrollY > 100 ? "block" : "none";
     };
@@ -912,12 +1055,10 @@ body {
       document.documentElement.scrollTop = 0;
     }
   </script>
-
-
 <div class="floating-bar">
-  <a href="tel:+918796274844">📞 Call</a>
-  <a href="https://wa.me/918796274844">💬 WhatsApp</a>
-  <a href="#contact">📧 Email</a>
+<a href="tel:+918796274844">📞 Call</a>
+<a href="https://wa.me/918796274844">💬 WhatsApp</a>
+<a href="#contact">📧 Email</a>
 </div>
 <style>
 .floating-bar {
@@ -942,28 +1083,6 @@ body {
 }
 
 </style>
-<script>
-document.getElementById('modeToggle').addEventListener('change', function () {
-  document.body.classList.toggle('dark-theme');
-});
-</script>
-<style>
-.dark-theme {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-}
-.dark-theme header, .dark-theme nav, .dark-theme footer {
-  background-color: #333 !important;
-  color: white !important;
-}
-
-body {
-  cursor: url('https://cdn-icons-png.flaticon.com/512/685/685655.png'), auto;
-}
-
-</style>
-
-
 <div id="scrollProgress"></div>
 <script>
   window.onscroll = function() {
@@ -973,22 +1092,3 @@ body {
     document.getElementById("scrollProgress").style.width = scrolled + "%";
   };
 </script>
-<style>
-#scrollProgress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  background: #f50057;
-  width: 0%;
-  z-index: 1000;
-}
-
-body {
-  cursor: url('https://cdn-icons-png.flaticon.com/512/685/685655.png'), auto;
-}
-
-</style>
-
-</body>
-</html>
